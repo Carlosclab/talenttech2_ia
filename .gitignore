@@ -1,0 +1,4 @@
+#flask gitignore
+__pycache__/
+*.pyc
+.venv/
