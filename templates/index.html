@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Predicción</title>
+</head>
+<body>
+    <h1>Aplicación de Predicción</h1>
+    <form method="post">
+        <label for="input_value">Ingrese el valor a predecir:</label>
+        <input type="text" name="input_value" id="input_value"/>
+        <button type="submit">Predecir</button>
+    </form>
+
+    <!-- {% if prediction %}
+        <h2>Resultado de la regresión: {{ prediction }}</h2>
+    {% endif %} -->
+
+    {% if classification_result %}
+        <h2>Resultado de la clasificación: {{ classification_result }}</h2>
+    {% endif %}
+</body>
+</html>
