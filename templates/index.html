@@ -4,21 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
     <title>Predicción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        h1, h2 {
+            font-weight: normal;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<body>
-    <h1>Aplicación de Predicción</h1>
-    <form method="post">
-        <label for="input_value">Ingrese el valor a predecir:</label>
-        <input type="text" name="input_value" id="input_value"/>
-        <button type="submit">Predecir</button>
-    </form>
+<body style="background-color: {{ bg_color }};">
+    <div class="container">
+        <h1>Aplicación de Predicción</h1>
+        <form method="post">
+            <label for="input_value">Ingrese el valor a predecir:</label>
+            <input type="text" name="input_value" id="input_value"/>
+            <button type="submit">Predecir</button>
+        </form>
 
-    <!-- {% if prediction %}
-        <h2>Resultado de la regresión: {{ prediction }}</h2>
-    {% endif %} -->
+        <!-- {% if prediction %}
+            <h2>Resultado de la regresión: {{ prediction }}</h2>
+        {% endif %} -->
 
-    {% if classification_result %}
-        <h2>Resultado de la clasificación: {{ classification_result }}</h2>
-    {% endif %}
+        {% if classification_result %}
+            <h2>Resultado de la clasificación: {{ classification_result }}</h2>
+        {% endif %}
+    </div>
 </body>
 </html>
