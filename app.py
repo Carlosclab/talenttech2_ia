@@ -47,4 +47,4 @@ def index():
                            bg_color=bg_color)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
